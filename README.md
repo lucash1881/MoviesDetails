@@ -1,26 +1,69 @@
-# Movie Search
+# Catálogo de Películas en React
 
-Create a basic routing for a movie search and storage application. Preview working application
+Este proyecto es un catálogo de películas desarrollado en React, conectado a la API de TheMovieDB para proporcionar una experiencia de usuario interactiva y actualizada. Los usuarios pueden explorar y buscar películas, acceder a información detallada y disfrutar de una interfaz intuitiva.
 
-For the backend, use themoviedb.org API(https://www.themoviedb.org/). 
-You need to register (you can enter any data) and get API key. The following endpoints will be used in this work.
+## Contenido
 
-/trending/get-trending a list of the most popular movies for today to create a collection on the home page page.
-/search/search-movies keyword search for a movie on the movies page.
-/movies/get-movie-details Request full movie info for the movie page.
-/movies/get-movie-credits Request cast info for the movie page.
-/movies/get-movie-reviews requesting reviews for the movie page.
-Documentation link(https://developers.themoviedb.org/3/getting-started/introduction)
+- [Características](#características)
+- [Requisitos](#requisitos)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Contribución](#contribución)
+- [Licencia](#licencia)
 
-Routes.​
+## Características
 
-The app should have the following routes. If a user has accessed a non-existent route, it must be redirected to the home page.
+- **Actualización Automática:** Conexión con la API de TheMovieDB para mantener la información siempre actualizada.
+- **Búsqueda Selectiva:** Búsqueda por género, año de lanzamiento, actores, etc., para una experiencia personalizada.
+- **Optimización Asíncrona:** Aprovechamiento de la naturaleza asincrónica de React para operaciones eficientes.
+- **Experiencia de Usuario Mejorada:** Interfaz intuitiva, tiempos de carga rápidos y navegación sin problemas.
+- **Escalabilidad:** Diseñado para admitir futuras adiciones de características y contenido.
 
-The ``Home'' component, the home page with a list of popular movies.   
-The /'/movies' - component Movies, a page of movie search by keyword. keyword.   
-/movies/:movieId' - component MovieDetails, a page with detailed information about the movie.  
-/movies/:movieId/cast - component Cast, information about the cast. Rendered on the page MovieDetails.  
-/movies/:movieId/reviews - component Reviews, information about reviews. Rendered on the page MovieDetails.  
-Code Splitting​
+## Requisitos
 
-Add asynchronous JS code loading for the application routes using React.lazy() and <Suspense>.
+- [Node.js](https://nodejs.org/) instalado
+- Clave de API válida de [TheMovieDB](https://www.themoviedb.org/)
+
+## Instalación
+
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/TuUsuario/TuProyecto.git
+Ingresa al directorio del proyecto:
+
+bash
+Copy code
+cd TuProyecto
+Instala las dependencias:
+
+bash
+Copy code
+npm install
+Crea un archivo .env en la raíz del proyecto y agrega tu clave de API de TheMovieDB:
+
+env
+Copy code
+REACT_APP_TMDB_API_KEY=TU_CLAVE_DE_API
+Reemplaza TU_CLAVE_DE_API con tu clave de API obtenida de TheMovieDB.
+
+Uso
+Inicia la aplicación:
+
+bash
+Copy code
+npm start
+Abre tu navegador y ve a http://localhost:3000.
+
+¡Explora y disfruta del catálogo de películas!
+
+Contribución
+Si deseas contribuir a este proyecto, sigue estos pasos:
+
+Haz un fork del repositorio.
+Crea una rama para tu contribución: git checkout -b mi-contribucion.
+Realiza tus cambios y haz commit: git commit -m "Añadir mi contribución".
+Haz push a la rama: git push origin mi-contribucion.
+Abre un Pull Request.
+Licencia
+Este proyecto está bajo la Licencia MIT.
